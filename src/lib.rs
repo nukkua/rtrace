@@ -25,8 +25,14 @@ mod tests {
     }
 
     #[test]
-    fn a_command_is_accepeted() {
+    fn a_command_is_accepted() {
         let args = vec!["true".to_string()];
+        assert!(matches!(run(&args), Ok(0)));
+    }
+
+    #[test]
+    fn help_command_accepted() {
+        let args = vec!["-h".to_string()];
         assert!(matches!(run(&args), Ok(0)));
     }
 

@@ -18,3 +18,9 @@ fn a_command_exits_zero_for_now() {
     let status = rtrace().arg("true").status().expect("failed to run rtrace");
     assert!(status.success());
 }
+
+#[test]
+fn false_exists_one() {
+    let status = rtrace().arg("false").status().expect("failed to run rtrace");
+    assert_eq!(status.code(), Some(1));
+}

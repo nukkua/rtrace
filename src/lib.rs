@@ -1,5 +1,6 @@
 pub mod error;
-pub use error::Error; // makes it possible to do rtrace::Error, instead of rtrace::error::Error
+mod launch;
+pub use error::Error; 
 
 pub fn run(args: &[String]) -> Result<i32, Error> {
     if args.is_empty() {

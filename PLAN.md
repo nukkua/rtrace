@@ -210,6 +210,7 @@ and checks `exitCode`, with Vitest unit tests for the argument parsing underneat
 
 Learn: why `fork` is `unsafe` in `nix`, what survives `exec`, why the child must not
 allocate or panic between `fork` and `exec`, and zombie processes.
+Detailed walkthrough: [docs/chapter-01.md](docs/chapter-01.md).
 
 ### Chapter 2: become a tracer
 
